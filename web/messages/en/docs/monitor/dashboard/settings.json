@@ -304,7 +304,7 @@
       },
       {
         "card": "Storage / interface exclusions",
-        "endpoint": "/api/storage/exclusions, /api/network/exclusions",
+        "endpoint": "/api/health/storage-exclusions, /api/health/interface-exclusions",
         "source": "SQLite tables <code>excluded_storages</code> and <code>excluded_interfaces</code>."
       },
       {
