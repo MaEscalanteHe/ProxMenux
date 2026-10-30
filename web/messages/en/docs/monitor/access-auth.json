@@ -284,7 +284,7 @@
     "heading": "API tokens (long-lived)",
     "intro": "Browser sessions expire after 24 hours. For unattended integrations (Homepage widgets, Home Assistant sensors, Grafana scrapers, Uptime Kuma probes…) you generate a separate <strong>API token</strong> that lives 365 days. The token is a JWT signed with the same secret as the session token, but its <code>token_name</code> claim makes it easy to track and revoke individually.",
     "imageAlt": "API tokens panel showing the token list with name, prefix, created date and expiry",
-    "imageCaption": "The API tokens list under Settings — name, prefix (last 4 chars are shown for identification), created and expiry dates, revoke action.",
+    "imageCaption": "The API tokens list under Admin → Security — name, prefix (last 4 chars are shown for identification), created and expiry dates, revoke action.",
     "generateTitle": "Generate a token",
     "generateIntro": "From the dashboard:",
     "generateSteps": [
@@ -310,7 +310,7 @@
     "intro": "Two paths to TLS:",
     "items": [
       "<strong>Reverse proxy (recommended).</strong> Terminate TLS on Nginx / Caddy / Traefik and forward HTTP on port 8008 to the Flask process. Snippets below.",
-      "<strong>Direct HTTPS in the AppImage.</strong> Configure a certificate with <code>POST /api/ssl/configure</code> (UI: <strong>Settings → SSL</strong>). The HTTPS path uses <code>gevent.pywsgi</code> with its standard handler; flask-sock handles WebSocket upgrades for WSS. Certificate paths are stored in the SSL configuration."
+      "<strong>Direct HTTPS in the AppImage.</strong> Configure a certificate with <code>POST /api/ssl/configure</code> (UI: <strong>Admin → Security → SSL / HTTPS</strong>). The HTTPS path uses <code>gevent.pywsgi</code> with its standard handler; flask-sock handles WebSocket upgrades for WSS. Certificate paths are stored in the SSL configuration."
     ],
     "calloutTitle": "Direct HTTPS limitations",
     "calloutBody": "The Monitor can use a Proxmox-managed certificate or custom certificate files. It does not issue ACME certificates itself. For automatic issuance and renewal, use Proxmox ACME or a reverse proxy such as Caddy, Traefik or Nginx, and ensure renewed certificates are loaded."
