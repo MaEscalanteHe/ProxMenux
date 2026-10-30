@@ -61,6 +61,12 @@
         "badge": "Always available"
       },
       {
+        "icon": "Languages",
+        "href": "/docs/settings/change-language",
+        "title": "Change Language",
+        "description": "Switch the ProxMenux interface between eight languages. The choice is saved to config.json and the menu reloads in the new language."
+      },
+      {
         "icon": "Info",
         "href": "/docs/settings/show-version-information",
         "title": "Show Version Information",

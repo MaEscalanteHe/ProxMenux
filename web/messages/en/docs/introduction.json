@@ -25,7 +25,7 @@
     },
     "monitor": {
       "title": "ProxMenux Monitor",
-      "body": "Self-hosted web dashboard (AppImage). Real-time host metrics, a proactive Health Monitor, notifications, an optional AI rewrite hook (six providers), an integrated web terminal and a REST API. Enable from the Scripts menu (Settings → ProxMenux Monitor)."
+      "body": "Self-hosted web dashboard (AppImage). Real-time host metrics, a proactive Health Monitor, notifications, an optional AI rewrite hook (six providers), an integrated web terminal and a REST API. The installer sets it up as a service that starts on boot; activate, deactivate or check it from the Scripts menu (Settings → ProxMenux Monitor)."
     },
     "calloutTitle": "What ProxMenux acts on",
     "calloutIntro": "Three layers, all reachable from the same project:",
