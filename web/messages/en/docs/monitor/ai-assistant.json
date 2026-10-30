@@ -118,7 +118,7 @@
     "imageCaption": "The in-app modal — six cards, one per provider, with the same descriptions documented below.",
     "groq": {
       "heading": "Groq",
-      "tagline": "Very fast, generous free tier (30 req/min). Ideal to start.",
+      "tagline": "Very fast, with a generous free tier. A good place to start.",
       "items": [
         "API key: <a>console.groq.com/keys</a>",
         "Examples from the bundled model list: <code>allam-2-7b</code>, <code>qwen/qwen3.8-27b</code>, <code>openai/gpt-oss-20b</code>, <code>openai/gpt-oss-120b</code>.",
@@ -165,7 +165,7 @@
     },
     "ollama": {
       "heading": "Ollama (Local)",
-      "tagline": "Uses models exposed by your configured Ollama server. Local models execute there; Ollama cloud models forward requests to a cloud provider. Local execution avoids a hosted API charge but still uses your hardware and electricity.",
+      "tagline": "Uses models on your Ollama server. Fully local, private and free to run.",
       "items": [
         "No API key. Set the <em>Ollama URL</em> field to your server (default <code>http://localhost:11434</code> or whatever host runs your Ollama instance).",
         "Models: <strong>not filtered.</strong> The Monitor reads whichever models you have pulled on the Ollama side via <code>ollama pull &lt;model&gt;</code>. The dropdown is populated from <code>GET /api/tags</code> on your Ollama server.",
@@ -234,7 +234,7 @@
   },
   "detailLevel": {
     "heading": "Detail level per channel",
-    "intro": "Each of the four channels (Telegram, Discord, Gotify, Email) has its own detail-level dropdown. Three values are available, mapped to specific output token caps and to specific instructions in the default prompt:",
+    "intro": "Each of the six channels (Telegram, Discord, Gotify, Email, Pushover, Apprise) has its own detail-level dropdown. Three values are available, mapped to specific output token caps and to specific instructions in the default prompt:",
     "headerLevel": "Level",
     "headerLabel": "UI label",
     "headerCap": "Output cap",
@@ -261,7 +261,7 @@
     ],
     "defaultsIntro": "Defaults the Monitor applies on first install:",
     "defaults": [
-      "<strong>Telegram, Discord, Gotify</strong> — <code>standard</code>.",
+      "<strong>Telegram, Discord, Gotify, Pushover, Apprise</strong> — <code>standard</code>.",
       "<strong>Email</strong> — <code>detailed</code>. Email is the channel where you typically want the full picture for archival."
     ],
     "emailTitle": "Email detail level appends the original",

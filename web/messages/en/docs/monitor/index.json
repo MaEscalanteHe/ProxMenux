@@ -119,7 +119,7 @@
   },
   "serviceControl": {
     "heading": "Service control",
-    "intro": "Day-to-day, the Monitor is managed exactly like any other systemd service. It is also exposed as two entries inside the ProxMenux TUI under <em>Settings</em>:",
+    "intro": "Day-to-day, the Monitor is managed exactly like any other systemd service. It is also exposed as three entries inside the ProxMenux TUI under <em>Settings</em>:",
     "codeComment": "# Manual control",
     "footer": "See <link>Settings → ProxMenux Monitor</link> for the in-menu toggle and status verification flow."
   },

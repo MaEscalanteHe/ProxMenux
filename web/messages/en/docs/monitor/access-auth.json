@@ -18,7 +18,7 @@
   },
   "reaching": {
     "heading": "Reaching the dashboard",
-    "intro": "ProxMenux Monitor binds to <code>0.0.0.0:8008</code>. There are three common ways to reach it:",
+    "intro": "ProxMenux Monitor listens on TCP 8008 on all interfaces (<code>::</code>, IPv4 and IPv6). There are three common ways to reach it:",
     "outro": "Direct access matches the default systemd unit. Reverse-proxy and Secure Gateway access are described below. Trust for client IPs in <code>X-Forwarded-For</code> requires PROXMENUX_TRUST_PROXY=1 and a proxy you control. The presence of <code>X-Forwarded-Proto</code> or <code>X-Forwarded-Host</code> alone does not enable proxy trust. On ports 80/443 the frontend uses relative <code>/api/*</code> URLs; on any other port it calls port 8008 on the same host name."
   },
   "firstLaunch": {
@@ -158,7 +158,7 @@
     "authJsonTitle": "auth.json — what it contains and how it's protected",
     "authJsonBody": "Everything ProxMenux Monitor needs to authenticate you lives in a single file: <code>/root/.config/proxmenux-monitor/auth.json</code>, mode <code>0600</code>, owner <code>root</code>. The file holds <em>hashes</em> (PBKDF2) and <em>signing material</em> (<code>jwt_secret</code>, <code>totp_secret</code>) — never a plaintext password. Treat it like any other root-only secret: if you back up or replicate the host, encrypt the destination, and never commit it to version control.",
     "rotateTitle": "Rotating jwt_secret invalidates all existing JWTs",
-    "rotateBody": "If <code>auth.json</code> is regenerated (manual delete, reinstall, restore from a backup with a different secret) the <code>jwt_secret</code> changes and every previously-issued JWT — both interactive sessions and long-lived API tokens — fails verification with \"Invalid or expired token\". The UI flags affected API tokens with an <strong>Invalid — regenerate</strong> badge so the user knows to revoke and re-mint them; Home Assistant / scripts / any external client needs a fresh token after that.",
+    "rotateBody": "If <code>auth.json</code> is regenerated (manual delete, reinstall, restore from a backup with a different secret) the <code>jwt_secret</code> changes and every previously-issued JWT — both interactive sessions and long-lived API tokens — fails verification with \"Invalid or expired token\". The UI marks affected API tokens in red, with a badge telling you to revoke them and generate new ones; Home Assistant / scripts / any external client needs a fresh token after that.",
     "recoverTitle": "Recovering a lost password",
     "recoverIntro": "There is no online \"forgot password\" flow — by design, since the dashboard runs on the user's own host and the recovery path is shell access to that host. ProxMenux ships a guided reset inside the configuration menu so you don't have to hand-edit <code>auth.json</code>:",
     "survivesTitle": "What survives the reset",
@@ -288,10 +288,10 @@
     "generateTitle": "Generate a token",
     "generateIntro": "From the dashboard:",
     "generateSteps": [
-      "Navigate to <strong>the Security tab → API Access Tokens</strong> section.",
+      "Navigate to <strong>the Security tab → API Tokens</strong> section.",
       "Type a descriptive name (<em>e.g. \"Home Assistant\"</em>).",
       "Re-enter your password. If 2FA is on, also the current 6-digit code.",
-      "Click <strong>Generate Token</strong>. The token appears <strong>once</strong> — copy it immediately."
+      "Click <strong>Generate new token</strong>, then <strong>Generate token</strong>. The token appears <strong>once</strong> — copy it immediately."
     ],
     "generateCli": "From the command line:",
     "useTitle": "Use a token",
