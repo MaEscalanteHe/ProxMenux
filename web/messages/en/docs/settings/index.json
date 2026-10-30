@@ -76,7 +76,7 @@
         "icon": "Trash2",
         "href": "/docs/settings/uninstall-proxmenux",
         "title": "Uninstall ProxMenux",
-        "description": "Remove ProxMenux and (optionally) its dependencies. Also restores /root/.bashrc and /etc/motd backups created at install time."
+        "description": "Remove ProxMenux and (optionally) its dependencies. Also restores /root/.bashrc and /etc/motd backups created by Post-Install."
       }
     ]
   },
