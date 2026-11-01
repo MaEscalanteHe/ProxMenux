@@ -318,6 +318,9 @@ function PercentRing({ value, color, label }: { value: number; color: string; la
   )
 }
 
+// OpenZFS reports a pool without its newer features enabled, which needs no action.
+const zfsStatusIsInformational = (status?: string | null) => /features are not enabled/i.test(status ?? "")
+
 const zfsFragmentationColor = (pct: number) => (pct > 80 ? "#ef4444" : pct > 50 ? "#eab308" : "#06b6d4")
 
 export function StorageOverview({ disksOnly = false }: { disksOnly?: boolean } = {}) {
@@ -2002,7 +2005,11 @@ export function StorageOverview({ disksOnly = false }: { disksOnly?: boolean } =
 
                 <div className="flex-1 min-h-0 px-6 pb-6 overflow-y-auto flex flex-col gap-5">
                   {(pool.status || pool.action) && (
-                    <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/10 p-3 text-sm space-y-1">
+                    <div className={`rounded-lg border p-3 text-sm space-y-1 ${
+                      zfsStatusIsInformational(pool.status)
+                        ? "border-blue-500/30 bg-blue-500/10"
+                        : "border-yellow-500/30 bg-yellow-500/10"
+                    }`}>
                       {pool.status && <p><span className="font-medium">{t("storage.zfs.status")}:</span> {pool.status}</p>}
                       {pool.action && <p><span className="font-medium">{t("storage.zfs.action")}:</span> {pool.action}</p>}
                     </div>
