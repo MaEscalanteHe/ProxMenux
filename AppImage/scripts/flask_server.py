@@ -7998,7 +7998,8 @@ def get_detailed_gpu_info(gpu):
                 env = os.environ.copy()
                 env['TERM'] = 'xterm'  # Ensure terminal type is set
                 
-                cmd = f'{intel_gpu_top_path} -J' # Use the found path
+                # Without a shell: the signal has to reach intel_gpu_top itself.
+                cmd = [intel_gpu_top_path, '-J']
                 # print(f"[v0] Executing command: {cmd}", flush=True)
                 pass
                 
@@ -8008,7 +8009,6 @@ def get_detailed_gpu_info(gpu):
                     stderr=subprocess.PIPE,
                     text=True,
                     bufsize=1,
-                    shell=True,
                     env=env,
                     cwd='/'  # Ejecutar desde root en lugar de dentro del AppImage
                 )
