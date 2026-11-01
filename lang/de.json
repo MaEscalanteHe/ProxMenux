@@ -1482,7 +1482,7 @@
   "Could not check the NVIDIA GPU": "Konnte die NVIDIA GPU nicht überprüfen",
   "Could not clone any gasket-driver repository. Check your internet connection and": "Es konnte kein gasket-driver-Repository geklont werden. Überprüfen Sie Ihre Internetverbindung und",
   "Could not complete or verify the repository switch; changes may be partial and repository state is unknown. Inspect {ui} before retrying; no automatic rollback was attempted.": "Der Repository-Wechsel konnte nicht abgeschlossen oder überprüft werden; die Änderungen sind möglicherweise unvollständig und der Zustand der Repositorys ist unbekannt. Prüfen Sie {ui}, bevor Sie es erneut versuchen; es wurde kein automatisches Zurücksetzen versucht.",
-  "Could not complete private network release:": "Die Veröffentlichung des privaten Netzwerks konnte nicht abgeschlossen werden:",
+  "Could not complete private network release:": "Das private Netzwerk konnte nicht vollständig freigegeben werden:",
   "Could not configure IOMMU kernel parameters automatically. Configure manually and reboot.": "IOMMU-Kernelparameter konnten nicht automatisch konfiguriert werden. Manuell konfigurieren und neu starten.",
   "Could not configure the tmpfs mounts": "Die tmpfs-Mounts konnten nicht konfiguriert werden",
   "Could not convert the OCI rootfs to privileged": "Konnte die OCI-Rootfs nicht in privilegierte umwandeln",

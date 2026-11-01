@@ -363,9 +363,9 @@ def remove(root, vmid):
             remove_host_state(member)
             msg_ok(f"{translate('Container removed:')} CT {member}")
     if bridge and not bridge_in_use(bridge, set(members)):
-        released = release_bridge(bridge)
-        msg_ok(f"{translate('Private network release attempted:')} {bridge}")
-        if not released:
+        if release_bridge(bridge):
+            msg_ok(f"{translate('Private network of the application released:')} {bridge}")
+        else:
             msg_warn(f"{translate('Could not complete private network release:')} {bridge}")
             incomplete = True
     elif bridge:
