@@ -3797,7 +3797,14 @@
       "auditReviewDate": "Audit & Report: un risultato accettato può avere una data di revisione che lo ripresenta senza ritirare la decisione, e il confronto indica se un risultato è peggiorato, migliorato o rimasto invariato (con @Vaso73).",
       "ociCatalog": "OCI manager Apps (Technology Preview): una nuova voce nel menu di ProxMenux installa le applicazioni dalle loro immagini container ufficiali come LXC nativi di Proxmox, senza motore Docker. Il catalogo contiene 514 applicazioni.",
       "pbsSupport": "ProxMenux su Proxmox Backup Server: si installa con lo stesso comando e apre un menu proprio, con post-installazione e un Monitor che mostra lo stato, i datastore e le attività del server (contributo di @jcastro).",
-      "menuSearch": "Ricerca nel menu principale: basta un nome o parte di esso per trovare un'opzione di ProxMenux, un'applicazione OCI o un Helper-Script e aprirne la prima schermata."
+      "menuSearch": "Ricerca nel menu principale: basta un nome o parte di esso per trovare un'opzione di ProxMenux, un'applicazione OCI o un Helper-Script e aprirne la prima schermata.",
+      "composeStacks": "File Compose con più servizi — Custom image installa un LXC per servizio su una rete privata, avviati in ordine di dipendenza. Aggiornamenti, backup e rimozione valgono per l’intera applicazione.",
+      "keepProxmoxChanges": "Gli aggiornamenti OCI mantengono ciò che modifichi in Proxmox — variabili, comando di avvio, opzioni di rete, DNS, features, dimensioni dei dischi e righe lxc.* restano nel container ricostruito, anche negli aggiornamenti pianificati e in ogni membro di uno stack.",
+      "ociVlan": "Tag VLAN per le applicazioni OCI — l’installazione avanzata lo chiede accanto all’indirizzo, e Modifica lo cambia in un’applicazione a contenitore singolo. L’host non ha bisogno di accedere a quella VLAN.",
+      "ociNewApps": "Novità nel catalogo OCI — Authentik, TeslaMate, Zigbee2MQTT, Scanopy, Umami, Scrypted, NetAlertX e altre dieci applicazioni, e Ollama e llama.cpp funzionano sulle GPU integrate Intel e AMD.",
+      "hostUpdateJob": "Aggiornamenti di Proxmox che proseguono dopo la disconnessione — l’aggiornamento viene eseguito come job sul server e si riapre al nuovo accesso. Dopo un nuovo kernel viene mostrato il riavvio in sospeso, con un pulsante che controlla prima l’host.",
+      "storageDetails": "Dettagli dello storage — i pool ZFS mostrano struttura, scrub e stato dei dispositivi, e ogni disco mostra il suo controller, anche nella pagina Hardware. Le soglie dei dischi delle VM arrivano nelle Impostazioni.",
+      "log2ramV2": "Log2RAM 2.0 — il journal e i log delle attività di Proxmox restano su disco con la loro cronologia, e solo i log che cambiano di continuo vanno in RAM. Gli host che lo usano già si aggiornano con ProxMenux."
     }
   },
   "network": {

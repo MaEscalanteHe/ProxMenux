@@ -3796,7 +3796,14 @@
       "auditReviewDate": "Audit a správy — akceptované zistenie môže mať dátum kontroly, ktorý ho znova pripomenie bez zrušenia rozhodnutia, a porovnanie ukáže, či sa zistenie zhoršilo, zlepšilo alebo zostalo rovnaké (s @Vaso73).",
       "ociCatalog": "OCI manager Apps (Technology Preview) — nová položka v ponuke ProxMenux inštaluje aplikácie z ich oficiálnych kontajnerových obrazov ako natívne kontajnery Proxmox LXC, bez Dockeru. Katalóg obsahuje 514 aplikácií.",
       "pbsSupport": "ProxMenux na Proxmox Backup Server — inštaluje sa rovnakým príkazom a otvára vlastnú ponuku s poinštaláciou a Monitorom, ktorý zobrazuje stav, úložiská dát a úlohy servera (prispel @jcastro).",
-      "menuSearch": "Vyhľadávanie v hlavnej ponuke — názov alebo jeho časť nájde možnosť ProxMenux, aplikáciu OCI alebo Helper-Script a otvorí ju na jej prvej obrazovke."
+      "menuSearch": "Vyhľadávanie v hlavnej ponuke — názov alebo jeho časť nájde možnosť ProxMenux, aplikáciu OCI alebo Helper-Script a otvorí ju na jej prvej obrazovke.",
+      "composeStacks": "Súbory Compose s viacerými službami — Custom image nainštaluje jeden LXC na službu v privátnej sieti a spúšťa ich v poradí závislostí. Aktualizácie, zálohy a odstránenie fungujú pre celú aplikáciu.",
+      "keepProxmoxChanges": "Aktualizácie OCI zachovávajú, čo zmeníte v Proxmoxe — premenné, príkaz spustenia, sieťové možnosti, DNS, features, veľkosti diskov a riadky lxc.* zostávajú v obnovenom kontajneri, aj pri plánovaných aktualizáciách a v každom člene stacku.",
+      "ociVlan": "Značka VLAN pre aplikácie OCI — pokročilá inštalácia sa na ňu opýta pri adrese a Upraviť ju zmení pri samostatnej aplikácii. Hostiteľ nepotrebuje prístup do tejto VLAN.",
+      "ociNewApps": "Novinky v katalógu OCI — Authentik, TeslaMate, Zigbee2MQTT, Scanopy, Umami, Scrypted, NetAlertX a ďalších desať aplikácií a Ollama a llama.cpp bežia na integrovaných GPU Intel a AMD.",
+      "hostUpdateJob": "Aktualizácie Proxmoxu, ktoré pokračujú aj po odhlásení — aktualizácia beží ako úloha na serveri a po opätovnom prihlásení sa znova otvorí. Po novom jadre sa zobrazí čakajúci reštart s tlačidlom, ktoré najprv skontroluje hostiteľa.",
+      "storageDetails": "Podrobnosti úložiska — pooly ZFS zobrazujú svoju štruktúru, scrub a stav zariadení a každý disk ukazuje svoj radič, aj na stránke Hardvér. Prahové hodnoty diskov VM pribudli v Nastaveniach.",
+      "log2ramV2": "Log2RAM 2.0 — žurnál a záznamy úloh Proxmoxu zostávajú na disku so svojou históriou a do RAM idú len záznamy, ktoré sa neustále menia. Hostitelia, ktorí ho už používajú, sa aktualizujú s ProxMenux."
     }
   },
   "network": {

@@ -3797,7 +3797,14 @@
       "auditReviewDate": "Auditoria & Relatório — uma constatação aceite pode ter uma data de revisão que a traz de volta sem retirar a decisão, e a comparação indica se uma constatação piorou, melhorou ou se manteve (com @Vaso73).",
       "ociCatalog": "OCI manager Apps (Technology Preview) — uma nova entrada no menu do ProxMenux instala aplicações a partir das suas imagens de contentor oficiais como LXC nativos do Proxmox, sem motor Docker. O catálogo reúne 514 aplicações.",
       "pbsSupport": "ProxMenux no Proxmox Backup Server — instala-se com o mesmo comando e abre um menu próprio, com pós-instalação e um Monitor que mostra o estado, os datastores e as tarefas do servidor (contribuição de @jcastro).",
-      "menuSearch": "Pesquisa no menu principal — um nome ou parte dele encontra uma opção do ProxMenux, uma aplicação OCI ou um Helper-Script e abre-o no seu primeiro ecrã."
+      "menuSearch": "Pesquisa no menu principal — um nome ou parte dele encontra uma opção do ProxMenux, uma aplicação OCI ou um Helper-Script e abre-o no seu primeiro ecrã.",
+      "composeStacks": "Ficheiros Compose com vários serviços — Custom image instala um LXC por serviço numa rede privada, iniciados pela ordem das dependências. As atualizações, os backups e a remoção funcionam em toda a aplicação.",
+      "keepProxmoxChanges": "As atualizações OCI conservam o que altera no Proxmox — variáveis, comando de arranque, opções de rede, DNS, features, tamanhos de disco e linhas lxc.* mantêm-se no contentor reconstruído, também nas atualizações agendadas e em cada membro de uma pilha.",
+      "ociVlan": "Etiqueta VLAN para aplicações OCI — a instalação avançada pede-a junto ao endereço, e Modificar altera-a numa aplicação de um só contentor. O anfitrião não precisa de acesso a essa VLAN.",
+      "ociNewApps": "Novidades no catálogo OCI — Authentik, TeslaMate, Zigbee2MQTT, Scanopy, Umami, Scrypted, NetAlertX e mais dez aplicações, e o Ollama e o llama.cpp funcionam em GPU integradas Intel e AMD.",
+      "hostUpdateJob": "Atualizações do Proxmox que continuam após terminar a sessão — a atualização corre como uma tarefa no servidor e reabre ao voltar a entrar. Após um novo kernel é mostrado o reinício pendente, com um botão que verifica primeiro o anfitrião.",
+      "storageDetails": "Detalhes do armazenamento — os pools ZFS mostram a sua estrutura, scrub e estado dos dispositivos, e cada disco mostra a sua controladora, também na página de Hardware. Os limites de disco das VM chegam às Definições.",
+      "log2ramV2": "Log2RAM 2.0 — o journal e os registos de tarefas do Proxmox ficam em disco com o seu histórico, e só os registos que mudam constantemente vão para a RAM. Os anfitriões que já o usam atualizam-se com o ProxMenux."
     }
   },
   "network": {

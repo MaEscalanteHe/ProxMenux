@@ -3924,7 +3924,14 @@
       "auditReviewDate": "Audit & Report — an accepted finding can carry a review date that brings it back without withdrawing the decision, and the comparison says whether a finding got worse, got better or held (with @Vaso73).",
       "ociCatalog": "OCI manager Apps (Technology Preview) — a new entry in the ProxMenux menu installs applications from their official container images as native Proxmox LXC, with no Docker engine. The catalog carries 514 applications.",
       "pbsSupport": "ProxMenux on Proxmox Backup Server — it installs with the same command and opens a menu of its own, with post-install and a Monitor showing the health, datastores and tasks of the server (contributed by @jcastro).",
-      "menuSearch": "Search in the main menu — a name or part of it finds a ProxMenux option, an OCI application or a Helper-Script, and opens it at its first screen."
+      "menuSearch": "Search in the main menu — a name or part of it finds a ProxMenux option, an OCI application or a Helper-Script, and opens it at its first screen.",
+      "composeStacks": "Compose files with several services — Custom image installs one LXC per service on a private network, started in dependency order. Updates, backups and removal work on the whole application.",
+      "keepProxmoxChanges": "OCI updates keep what you change in Proxmox — variables, start command, network options, DNS, features, disk sizes and lxc.* lines stay on the rebuilt container, also in scheduled updates and on every member of a stack.",
+      "ociVlan": "VLAN tag for OCI applications — the advanced installation asks for it next to the address, and Modify changes it on a single application. The host needs no access to that VLAN.",
+      "ociNewApps": "New in the OCI catalog — Authentik, TeslaMate, Zigbee2MQTT, Scanopy, Umami, Scrypted, NetAlertX and ten more applications, and Ollama and llama.cpp run on Intel and AMD integrated GPUs.",
+      "hostUpdateJob": "Proxmox updates that carry on after signing out — the update runs as a job on the server and signing back in reopens it. A pending reboot is shown after a new kernel, with a restart button that checks the host first.",
+      "storageDetails": "Storage details — ZFS pools show their layout, scrub and device health, and each disk shows the storage controller it hangs off, also in the Hardware page. VM disk thresholds join Settings.",
+      "log2ramV2": "Log2RAM 2.0 — the journal and the task logs of Proxmox stay on disk with their history, and only the logs that change all the time go to RAM. Installed hosts update to it with ProxMenux."
     }
   },
   "network": {

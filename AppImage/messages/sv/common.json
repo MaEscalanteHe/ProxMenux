@@ -3797,7 +3797,14 @@
       "auditReviewDate": "Audit & Report — ett accepterat fynd kan ha ett granskningsdatum som tar upp det igen utan att beslutet dras tillbaka, och jämförelsen visar om ett fynd blev värre, blev bättre eller låg kvar (med @Vaso73).",
       "ociCatalog": "OCI manager Apps (Technology Preview) — en ny post i ProxMenux-menyn installerar applikationer från deras officiella containeravbilder som inbyggda Proxmox LXC, utan Docker-motor. Katalogen innehåller 514 applikationer.",
       "pbsSupport": "ProxMenux på Proxmox Backup Server — installeras med samma kommando och öppnar en egen meny, med efterinstallation och en Monitor som visar serverns hälsa, datalager och uppgifter (bidrag från @jcastro).",
-      "menuSearch": "Sökning i huvudmenyn — ett namn eller en del av det hittar ett ProxMenux-alternativ, en OCI-applikation eller ett Helper-Script och öppnar det på dess första skärm."
+      "menuSearch": "Sökning i huvudmenyn — ett namn eller en del av det hittar ett ProxMenux-alternativ, en OCI-applikation eller ett Helper-Script och öppnar det på dess första skärm.",
+      "composeStacks": "Compose-filer med flera tjänster — Custom image installerar en LXC per tjänst på ett privat nätverk, startade i beroendeordning. Uppdateringar, säkerhetskopior och borttagning gäller hela programmet.",
+      "keepProxmoxChanges": "OCI-uppdateringar behåller det du ändrar i Proxmox — variabler, startkommando, nätverksalternativ, DNS, features, diskstorlekar och lxc.*-rader finns kvar i den återskapade containern, även vid schemalagda uppdateringar och för varje medlem i en stack.",
+      "ociVlan": "VLAN-tagg för OCI-program — den avancerade installationen frågar efter den bredvid adressen, och Ändra byter den för ett enskilt program. Värden behöver ingen åtkomst till det VLAN:et.",
+      "ociNewApps": "Nytt i OCI-katalogen — Authentik, TeslaMate, Zigbee2MQTT, Scanopy, Umami, Scrypted, NetAlertX och tio program till, och Ollama och llama.cpp körs på integrerade GPU:er från Intel och AMD.",
+      "hostUpdateJob": "Proxmox-uppdateringar som fortsätter efter utloggning — uppdateringen körs som ett jobb på servern och öppnas igen när du loggar in. Efter en ny kärna visas en väntande omstart, med en knapp som först kontrollerar värden.",
+      "storageDetails": "Lagringsdetaljer — ZFS-pooler visar sin struktur, scrub och enheternas hälsa, och varje disk visar sin lagringskontroller, även på sidan Hårdvara. Tröskelvärden för VM-diskar finns nu i Inställningar.",
+      "log2ramV2": "Log2RAM 2.0 — journalen och Proxmox uppgiftsloggar stannar på disken med sin historik, och bara loggar som ändras hela tiden går till RAM. Värdar som redan använder det uppdateras med ProxMenux."
     }
   },
   "network": {
