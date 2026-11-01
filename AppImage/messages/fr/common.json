@@ -7769,7 +7769,11 @@
         "unconfirmedBody": "Le résultat de la sauvegarde n’est pas confirmé.",
         "warningTitle": "{hostname}: Sauvegarde terminée avec avertissements",
         "warningBody": "Sauvegarde terminée avec avertissements.",
-        "diagnosticsOmitted": "Lignes ou texte de diagnostic omis : {count}. Rapport original conservé."
+        "diagnosticsOmitted": "Lignes ou texte de diagnostic omis : {count}. Rapport original conservé.",
+        "quotaCause": "Un quota de stockage a empêché la sauvegarde de se terminer.",
+        "quotaAffected": "Sauvegardes {ids} : un quota de stockage a empêché leur achèvement.",
+        "quotaCheck": "Vérifiez le quota du stockage de sauvegarde {storage} avant de réessayer.",
+        "causeMissing": "Sauvegardes {ids} : le résumé ne précise pas la cause ; consultez les journaux complets de ces tâches."
       }
     }
   },

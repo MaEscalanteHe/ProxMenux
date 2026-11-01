@@ -7768,7 +7768,11 @@
         "unconfirmedBody": "Výsledok zálohovania nie je potvrdený.",
         "warningTitle": "{hostname}: Zálohovanie dokončené s upozorneniami",
         "warningBody": "Zálohovanie bolo dokončené s upozorneniami.",
-        "diagnosticsOmitted": "Ďalšie diagnostické riadky alebo text vynechaný: {count}. Pôvodná správa sa zachovala."
+        "diagnosticsOmitted": "Ďalšie diagnostické riadky alebo text vynechaný: {count}. Pôvodná správa sa zachovala.",
+        "quotaCause": "Kvóta úložiska zabránila dokončeniu zálohy.",
+        "quotaAffected": "Zálohy {ids}: kvóta úložiska zabránila ich dokončeniu.",
+        "quotaCheck": "Pred opakovaním skontrolujte kvótu zálohovacieho úložiska {storage}.",
+        "causeMissing": "Zálohy {ids}: súhrn neuvádza príčinu; skontrolujte úplné záznamy týchto úloh."
       }
     }
   },

@@ -7922,7 +7922,11 @@
         "unconfirmedBody": "El resultado del backup no está confirmado.",
         "warningTitle": "{hostname}: Backup completado con advertencias",
         "warningBody": "Backup completado con advertencias.",
-        "diagnosticsOmitted": "Líneas o texto de diagnóstico omitidos: {count}. Se conserva el informe original."
+        "diagnosticsOmitted": "Líneas o texto de diagnóstico omitidos: {count}. Se conserva el informe original.",
+        "quotaCause": "Una cuota de almacenamiento impidió completar la copia.",
+        "quotaAffected": "Copias {ids}: una cuota de almacenamiento impidió completarlas.",
+        "quotaCheck": "Revisa la cuota del almacenamiento de backup {storage} antes de repetir las copias.",
+        "causeMissing": "Copias {ids}: el resumen no indica la causa; revisa el log completo de esas tareas."
       }
     }
   },

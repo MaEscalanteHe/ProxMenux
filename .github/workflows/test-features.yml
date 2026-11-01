@@ -4,6 +4,11 @@ on:
   pull_request:
     paths:
       - '.github/workflows/test-features.yml'
+      - 'AppImage/scripts/notification_manager.py'
+      - 'AppImage/scripts/notification_templates.py'
+      - 'AppImage/scripts/ai_context_enrichment.py'
+      - 'AppImage/scripts/ai_providers/base.py'
+      - 'AppImage/scripts/tests/test_backup_ai_diagnostics.py'
       - 'AppImage/scripts/notification_channels.py'
       - 'AppImage/components/apprise-service-help.tsx'
       - 'AppImage/components/notification-settings.tsx'
@@ -61,6 +66,11 @@ on:
     branches: [main, develop]
     paths:
       - '.github/workflows/test-features.yml'
+      - 'AppImage/scripts/notification_manager.py'
+      - 'AppImage/scripts/notification_templates.py'
+      - 'AppImage/scripts/ai_context_enrichment.py'
+      - 'AppImage/scripts/ai_providers/base.py'
+      - 'AppImage/scripts/tests/test_backup_ai_diagnostics.py'
       - 'AppImage/scripts/notification_channels.py'
       - 'AppImage/components/apprise-service-help.tsx'
       - 'tests/test_apprise_services.py'
@@ -246,6 +256,10 @@ jobs:
         run: python -I -B -m unittest discover -s AppImage/scripts/tests -p test_proxmox_node_name.py -v
       - name: Test notification configuration writes against a cluster filesystem fixture
         run: python -I -B -m unittest discover -s AppImage/scripts/tests -p test_pve_notifications_cfg_writes.py -v
+      - name: Test AI diagnostic explanations and backup inventory integrity
+        run: |
+          python -I -B -m unittest discover -s AppImage/scripts/tests -p test_backup_ai_diagnostics.py -v
+          python -I -B -m unittest discover -s AppImage/scripts/tests -p test_vzdump_ai_integrity.py -v
 
   registry-accounts:
     runs-on: ubuntu-latest

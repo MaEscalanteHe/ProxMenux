@@ -7769,7 +7769,11 @@
         "unconfirmedBody": "Das Backup-Ergebnis ist nicht bestätigt.",
         "warningTitle": "{hostname}: Sicherung mit Warnungen abgeschlossen",
         "warningBody": "Sicherung mit Warnungen abgeschlossen.",
-        "diagnosticsOmitted": "Weitere Diagnosezeilen oder Text ausgelassen: {count}. Originalbericht bleibt erhalten."
+        "diagnosticsOmitted": "Weitere Diagnosezeilen oder Text ausgelassen: {count}. Originalbericht bleibt erhalten.",
+        "quotaCause": "Ein Speicherkontingent verhinderte den Abschluss der Sicherung.",
+        "quotaAffected": "Sicherungen {ids}: ein Speicherkontingent verhinderte den Abschluss.",
+        "quotaCheck": "Prüfe das Kontingent des Sicherungsspeichers {storage}, bevor du es erneut versuchst.",
+        "causeMissing": "Sicherungen {ids}: die Zusammenfassung nennt keine Ursache; prüfe die vollständigen Aufgabenprotokolle."
       }
     }
   },

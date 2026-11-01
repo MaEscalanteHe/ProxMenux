@@ -7769,7 +7769,11 @@
         "unconfirmedBody": "O resultado do backup não está confirmado.",
         "warningTitle": "{hostname}: Backup concluído com avisos",
         "warningBody": "Backup concluído com avisos.",
-        "diagnosticsOmitted": "Linhas ou texto de diagnóstico omitidos: {count}. Relatório original preservado."
+        "diagnosticsOmitted": "Linhas ou texto de diagnóstico omitidos: {count}. Relatório original preservado.",
+        "quotaCause": "Uma quota de armazenamento impediu a conclusão do backup.",
+        "quotaAffected": "Backups {ids}: uma quota de armazenamento impediu a conclusão.",
+        "quotaCheck": "Verifica a quota do armazenamento de backup {storage} antes de tentar novamente.",
+        "causeMissing": "Backups {ids}: o resumo não indica a causa; consulta os logs completos dessas tarefas."
       }
     }
   },

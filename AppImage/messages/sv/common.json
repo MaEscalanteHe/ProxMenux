@@ -7769,7 +7769,11 @@
         "unconfirmedBody": "Säkerhetskopieringens resultat är inte bekräftat.",
         "warningTitle": "{hostname}: Säkerhetskopiering klar med varningar",
         "warningBody": "Säkerhetskopiering klar med varningar.",
-        "diagnosticsOmitted": "Utelämnade diagnosrader eller text: {count}. Originalrapporten bevaras."
+        "diagnosticsOmitted": "Utelämnade diagnosrader eller text: {count}. Originalrapporten bevaras.",
+        "quotaCause": "En lagringskvot hindrade säkerhetskopieringen från att slutföras.",
+        "quotaAffected": "Säkerhetskopior {ids}: en lagringskvot hindrade dem från att slutföras.",
+        "quotaCheck": "Kontrollera kvoten för säkerhetskopieringslagringen {storage} innan du försöker igen.",
+        "causeMissing": "Säkerhetskopior {ids}: sammanfattningen anger inte orsaken; kontrollera de fullständiga loggarna för dessa uppgifter."
       }
     }
   },

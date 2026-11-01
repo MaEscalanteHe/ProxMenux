@@ -7769,7 +7769,11 @@
         "unconfirmedBody": "L’esito del backup non è confermato.",
         "warningTitle": "{hostname}: Backup completato con avvisi",
         "warningBody": "Backup completato con avvisi.",
-        "diagnosticsOmitted": "Righe o testo diagnostico omessi: {count}. Il report originale è conservato."
+        "diagnosticsOmitted": "Righe o testo diagnostico omessi: {count}. Il report originale è conservato.",
+        "quotaCause": "Una quota di archiviazione ha impedito il completamento del backup.",
+        "quotaAffected": "Backup {ids}: una quota di archiviazione ne ha impedito il completamento.",
+        "quotaCheck": "Controlla la quota dello storage di backup {storage} prima di riprovare.",
+        "causeMissing": "Backup {ids}: il riepilogo non indica la causa; controlla i log completi di queste attività."
       }
     }
   },
