@@ -41,6 +41,9 @@ def report(count=11):
                                'null' if failed else f'ct/{vmid}/2026-11-01T06:00:00Z'))
     return ('Proxmox vzdump report\n' + '\n'.join(rows)
             + '\nTotal running time: 00:14:47\nTotal size: 110.487 GiB\n'
+            + '108: 2026-11-01 07:10:47 INFO: Starting Backup of VM 108 (lxc)\n'
+            + '110: 2026-11-01 07:14:47 INFO: Starting Backup of VM 110 (qemu)\n'
+            + '9000: 2026-11-01 07:14:48 INFO: Starting Backup of VM 9000 (lxc)\n'
             + "108: 2026-11-01 07:14:47 ERROR: Backup of VM 108 failed - command '/usr/bin/proxmox-backup-client backup root.pxar:/mnt/vzsnap0' failed: exit code 255\n"
             + "110: 2026-11-01 07:14:48 ERROR: VM 110 qmp command 'backup' failed - backup connect failed: command error: Disk quota exceeded (os error 122)\n"
             + "9000: 2026-11-01 07:14:53 ERROR: Backup of VM 9000 failed - command 'lxc-usernsexec -- proxmox-backup-client backup' failed: exit code 255\n")
@@ -182,6 +185,33 @@ class BackupAIDiagnosticsTests(unittest.TestCase):
             self.assertEqual(self.explain(data, rendered, **config),
                              {'title': rendered['title'], 'body': rendered['body']})
         self.assertEqual(self.prompts, [])
+
+    def test_ai_guest_type_is_corrected_using_authoritative_inventory(self):
+        data, rendered = render()
+        self.assertEqual(data['_backup_analysis']['guest_types'],
+                         {'108': 'CT', '110': 'VM', '9000': 'CT'})
+        with patch.object(self.provider, 'generate', return_value=(
+                '[TITLE]\nIgnored\n[BODY]\nCT 110: cuota excedida. VM 108: falta causa.')) as generate:
+            result = self.explain(data, rendered)
+        explanation = result['body'][len(data['_backup_analysis']['inventory_body']):]
+        self.assertIn('VM 110: cuota excedida', explanation)
+        self.assertIn('CT 108: falta causa', explanation)
+        self.assertIn('Guest identities: CT 108, VM 110, CT 9000', generate.call_args.args[1])
+
+    def test_ai_cannot_introduce_a_failed_guest_outside_the_report(self):
+        data, rendered = render()
+        with patch.object(self.provider, 'generate', return_value=(
+                '[TITLE]\nIgnored\n[BODY]\nVM 999: backup failed.')):
+            result = self.explain(data, rendered)
+        self.assertNotIn('999', result['body'])
+        self.assertIn('Copias 110:', result['body'])
+
+    def test_unknown_guest_type_is_neutral_in_ai_explanation(self):
+        data, rendered = render()
+        data['_backup_analysis']['guest_types'].pop('110')
+        result = self.explain(data, rendered)
+        explanation = result['body'][len(data['_backup_analysis']['inventory_body']):]
+        self.assertIn('ID 110:', explanation)
 
     def test_missing_credentials_use_evidenced_quota_fallback(self):
         data, rendered = render()

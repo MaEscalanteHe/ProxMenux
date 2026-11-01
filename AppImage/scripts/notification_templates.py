@@ -2308,6 +2308,12 @@ def render_template(event_type: str, data: Dict[str, Any],
             'diagnostics': '\n'.join(dict.fromkeys(line for line in analysis_lines if line.strip())),
             'failed_ids': [str(guest['vmid']) for guest in (parsed_backup or {}).get('vms', [])
                            if str(guest.get('status', '')).lower() == 'error'],
+            'guest_types': {
+                str(guest['vmid']): 'VM' if guest['type'] == 'qemu' else 'CT'
+                for guest in (parsed_backup or {}).get('vms', [])
+                if str(guest.get('status', '')).lower() == 'error'
+                and guest.get('type') in ('qemu', 'lxc')
+            },
         }
 
     if backup_diagnostics:
@@ -3390,6 +3396,8 @@ and one brief, actionable check when supported by the evidence. {emoji_rule}
 Do not reproduce shell commands, credentials, timestamps, raw logs, or a backup inventory.
 Never invent successes, failed guest IDs, causes, available space or quota amounts.
 Keep the scope of each error: a cause recorded for one guest is not proof for other guests.
+Use the authoritative Guest identities from the context, with VM/CT labels exactly
+as given. Proxmox's generic "Backup of VM" log wording can also refer to a CT.
 "Disk quota exceeded" means a quota prevented a write, not proof that the Proxmox
 host disk is full. If the error explicitly concerns a PBS connection/write, explain
 the destination quota and suggest checking that account/datastore quota.
@@ -3464,6 +3472,11 @@ def format_backup_diagnostics_with_ai(title: str, body: str, severity: str,
     context = '\n'.join(lines)
     if len(context) > 12000:
         context = context[:5999] + '\n…\n' + context[-5998:]
+    guest_types = {str(vmid): kind for vmid, kind in analysis.get('guest_types', {}).items()
+                   if kind in ('VM', 'CT') and re.fullmatch(r'\d+', str(vmid))}
+    if guest_types:
+        context = 'Guest identities: ' + ', '.join(
+            f'{guest_types[vmid]} {vmid}' for vmid in sorted(guest_types, key=int)) + '\n' + context
     language = AI_LANGUAGES.get(ai_config.get('ai_language', 'en'), 'English')
     config = {
         **ai_config, 'channel_type': '', 'ai_prompt_mode': 'custom',
@@ -3477,7 +3490,19 @@ def format_backup_diagnostics_with_ai(title: str, body: str, severity: str,
     except Exception:
         result = {}
     explanation = str(result.get('body') or '').strip()
-    if not explanation or explanation == context or len(explanation) > 2000:
+    invalid = not explanation or explanation == context or len(explanation) > 2000
+    if not invalid:
+        references = re.compile(r'\b(?:VM|CT)\s*#?\s*(\d+)\b', re.IGNORECASE)
+        failed_ids = {str(vmid) for vmid in analysis.get('failed_ids', [])}
+        if failed_ids and set(references.findall(explanation)) - failed_ids:
+            invalid = True
+        else:
+            # A fluent diagnosis must not turn a VM into a CT (or vice versa).
+            # Unknown types stay neutral rather than inheriting the model's guess.
+            explanation = references.sub(
+                lambda match: f"{guest_types.get(match.group(1), 'ID')} {match.group(1)}",
+                explanation)
+    if invalid:
         explanation = _backup_quota_explanation(
             diagnostics, analysis, data, ai_config.get('ai_language', 'en'), use_emojis)
         if not explanation:
