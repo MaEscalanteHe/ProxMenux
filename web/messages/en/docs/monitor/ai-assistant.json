@@ -9,7 +9,7 @@
   },
   "header": {
     "title": "AI Assistant",
-    "description": "Optional AI rewriting turns eligible notification templates into plain-language messages, with per-channel detail levels, thirteen UI languages, custom prompts, a public community library and context enrichment. Backup reports <code>backup_complete</code> and <code>backup_fail</code> bypass AI entirely.",
+    "description": "Optional AI rewriting turns eligible notification templates into plain-language messages, with per-channel detail levels, thirteen UI languages, custom prompts, a public community library and context enrichment. Backup reports backup_complete and backup_fail are never rewritten; with AI Suggestions on, the AI only appends an explanation when a backup reports errors.",
     "section": "ProxMenux Monitor"
   },
   "intro": {
@@ -83,7 +83,7 @@
     "intro1": "Every commercial provider charges per <em>token</em>, so it's worth understanding what a token is before picking a plan. A token is roughly four characters of English text or about three quarters of a word. The phrase <em>\"Backup completed on storage local-bak\"</em> is around eight tokens. A short journal excerpt of ten lines can be 200-400 tokens depending on the technical density.",
     "intro2": "Two things are billed on every call:",
     "items": [
-      "<strong>Input tokens</strong> cover the system prompt and user message: severity, title, rendered body and enriched context. Their number depends on the actual prompt and event content. Each rewritten channel can incur its own input-token usage; backup-complete and backup-fail reports bypass AI.",
+      "<strong>Input tokens</strong> cover the system prompt and user message: severity, title, rendered body and enriched context. Their number depends on the actual prompt and event content. Each rewritten channel can incur its own input-token usage; backup-complete and backup-fail reports only use tokens when the AI explains backup errors.",
       "<strong>Output tokens</strong> — what the model writes back. The Monitor caps this with <code>max_tokens</code> (see the table below). The cap is a <em>limit</em>, not a charge: if the model produces 250 tokens with a cap of 1500, you pay for 250."
     ],
     "capsIntro": "These are the actual caps the dispatcher applies, taken straight from <code>AI_DETAIL_TOKENS</code> in <code>notification_templates.py</code>:",
@@ -280,7 +280,7 @@
   },
   "templates": {
     "heading": "A note on templates",
-    "body1": "The AI receives a rendered template rather than raw event data. Types such as <code>vm_start</code>, <code>auth_fail</code> and <code>health_degraded</code> have templates in <code>notification_templates.py</code>. The AI rewrites eligible template output; <code>backup_complete</code> and <code>backup_fail</code> retain their deterministic reports and bypass AI.",
+    "body1": "The AI receives a rendered template rather than raw event data. Types such as <code>vm_start</code>, <code>auth_fail</code> and <code>health_degraded</code> have templates in <code>notification_templates.py</code>. The AI rewrites eligible template output; <code>backup_complete</code> and <code>backup_fail</code> retain their deterministic reports; with AI Suggestions on, the AI only appends an explanation when the backup reports errors.",
     "body2": "Two practical implications: the AI never sees a hostname or VMID it has to invent — those fields are placed by the template before the rewrite. And if AI is disabled, the templated body is what gets dispatched directly. The <link>Notifications</link> page documents the dispatch pipeline in full and is the right cross-reference for everything that happens to an event before it reaches this layer."
   },
   "privacy": {
