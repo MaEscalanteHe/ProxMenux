@@ -118,7 +118,7 @@
     "imageCaption": "In-app modal — sei carte, una per fornitore, con le stesse descrizioni documentate di seguito.",
     "groq": {
       "heading": "Groq",
-      "tagline": "Molto veloce, generoso tier libero (30 req/min). Ideale per iniziare.",
+      "tagline": "Molto veloce, con un generoso tier gratuito. Un buon punto di partenza.",
       "items": [
         "Chiave API: <a>console.groq.com/keys</a>",
         "Esempi dall’elenco di modelli incluso: <code>allam-2-7b</code>, <code>qwen/qwen3.8-27b</code>, <code>openai/gpt-oss-20b</code>, <code>openai/gpt-oss-120b</code>.",
@@ -165,7 +165,7 @@
     },
     "ollama": {
       "heading": "Ollama (locale)",
-      "tagline": "Usa i modelli esposti dal server Ollama configurato. I modelli locali vengono eseguiti lì; i modelli cloud inoltrano le richieste a un provider esterno. L’esecuzione locale evita costi di API ospitate, ma usa hardware ed elettricità tuoi.",
+      "tagline": "Usa i modelli sul tuo server Ollama. Completamente locale, privato e gratuito.",
       "items": [
         "Nessuna chiave API. Impostare il campo <em>Ollama URL</em> sul server (default <code>http://localhost:11434</code> o qualsiasi host esegue l'istanza Ollama).",
         "Modelli <strong>non filtrati.</strong> Monitor legge i modelli scaricati con <code>ollama pull &lt;model&gt;</code>. L’elenco viene caricato da <code>GET /api/tags</code> sul server Ollama.",
@@ -234,7 +234,7 @@
   },
   "detailLevel": {
     "heading": "Livello di dettaglio per canale",
-    "intro": "Telegram, Discord, Gotify ed e-mail hanno ciascuno una scelta del dettaglio. Tre valori regolano i limiti dei token e le istruzioni del prompt predefinito:",
+    "intro": "Ciascuno dei sei canali (Telegram, Discord, Gotify, e-mail, Pushover, Apprise) ha una propria scelta del dettaglio. Tre valori regolano i limiti dei token e le istruzioni del prompt predefinito:",
     "headerLevel": "Livello",
     "headerLabel": "Etichetta UI",
     "headerCap": "Limite di uscita",
@@ -261,7 +261,7 @@
     ],
     "defaultsIntro": "Impostazioni predefinite alla prima installazione:",
     "defaults": [
-      "<strong>Telegram, Discord, Gotify</strong> — <code>standard</code>.",
+      "<strong>Telegram, Discord, Gotify, Pushover, Apprise</strong> — <code>standard</code>.",
       "<strong>Email</strong> — <code>detailed</code>. Email è il canale in cui si desidera in genere l'immagine completa per l'archiviazione."
     ],
     "emailTitle": "Il livello di dettaglio e-mail aggiunge l'originale",

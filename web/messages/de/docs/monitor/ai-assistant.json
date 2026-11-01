@@ -118,7 +118,7 @@
     "imageCaption": "Informationsfenster mit sechs Karten, einer je Anbieter, und den unten beschriebenen Angaben.",
     "groq": {
       "heading": "Groq",
-      "tagline": "Sehr schnelle, großzügige freie Stufe (30 req/min). Ideal zum Starten.",
+      "tagline": "Sehr schnell, mit großzügiger freier Stufe. Ein guter Einstieg.",
       "items": [
         "API-Schlüssel: <a>console.groq.com/keys</a>",
         "Beispiele aus der mitgelieferten Modellliste: <code>allam-2-7b</code>, <code>qwen/qwen3.8-27b</code>, <code>openai/gpt-oss-20b</code>, <code>openai/gpt-oss-120b</code>.",
@@ -165,7 +165,7 @@
     },
     "ollama": {
       "heading": "Ollama (lokal)",
-      "tagline": "Nutzt die Modelle Ihres konfigurierten Ollama-Servers. Lokale Modelle laufen dort; Ollama-Cloud-Modelle leiten Anfragen an einen Cloud-Anbieter weiter. Lokale Ausführung vermeidet gehostete API-Gebühren, verbraucht aber eigene Hardware und Strom.",
+      "tagline": "Nutzt Modelle auf Ihrem Ollama-Server. Vollständig lokal, privat und kostenlos im Betrieb.",
       "items": [
         "Kein API-Schlüssel. Setzen Sie das <em>Ollama URL</em>-Feld auf Ihren Server (Standard <code>http://localhost:11434</code> oder welcher Host Ihre Ollama-Instanz ausführt).",
         "Modelle: <strong>nicht gefiltert.</strong> Der Monitor liest die Modelle, die Sie auf der Ollama-Seite über <code>ollama pull &lt;model&gt;</code> gezogen haben. Der Dropdown wird von <code>GET /api/tags</code> auf Ihrem Ollama-Server ausgefüllt.",
@@ -234,7 +234,7 @@
   },
   "detailLevel": {
     "heading": "Detailebene pro Kanal",
-    "intro": "Telegram, Discord, Gotify und E-Mail haben jeweils eine eigene Auswahl der Detailstufe. Drei Werte steuern im Standardprompt sowohl das Ausgabe-Token-Limit als auch die Detailvorgaben:",
+    "intro": "Jeder der sechs Kanäle (Telegram, Discord, Gotify, E-Mail, Pushover, Apprise) hat eine eigene Auswahl der Detailstufe. Drei Werte steuern im Standardprompt sowohl das Ausgabe-Token-Limit als auch die Detailvorgaben:",
     "headerLevel": "Ebene",
     "headerLabel": "UI-Kennzeichnung",
     "headerCap": "Ausgabegrenze",
@@ -261,7 +261,7 @@
     ],
     "defaultsIntro": "Standardwerte bei der ersten Installation:",
     "defaults": [
-      "<strong>Telegram, Discord, Gotify</strong> — <code>standard</code>.",
+      "<strong>Telegram, Discord, Gotify, Pushover, Apprise</strong>: <code>standard</code>.",
       "<strong>Email</strong> — <code>detailed</code>. E-Mail ist der Kanal, in dem Sie normalerweise das vollständige Bild für die Archivierung wünschen."
     ],
     "emailTitle": "E-Mail-Detailebene fügt das Original hinzu",

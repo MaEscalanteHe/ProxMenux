@@ -118,7 +118,7 @@
     "imageCaption": "Modál v aplikácii – šesť kariet, jedna na poskytovateľa, s rovnakými popismi zdokumentovanými nižšie.",
     "groq": {
       "heading": "Groq",
-      "tagline": "Veľmi rýchla, veľkorysá voľná úroveň (30 req/min). Ideálne začať.",
+      "tagline": "Veľmi rýchla, s veľkorysou bezplatnou úrovňou. Dobré miesto na začiatok.",
       "items": [
         "Kľúč API: <a>console.groq.com/keys</a>",
         "Príklady z dodaného zoznamu modelov: <code>allam-2-7b</code>, <code>qwen/qwen3.8-27b</code>, <code>openai/gpt-oss-20b</code>, <code>openai/gpt-oss-120b</code>.",
@@ -165,7 +165,7 @@
     },
     "ollama": {
       "heading": "Ollama (miestne)",
-      "tagline": "Používa modely sprístupnené nastaveným serverom Ollama. Lokálne modely bežia na ňom; cloudové modely Ollama posielajú požiadavky cloudovému poskytovateľovi. Lokálna prevádzka nemá poplatok za hostované API, ale využíva vlastný hardvér a elektrinu.",
+      "tagline": "Používa modely na vašom serveri Ollama. Plne lokálne, súkromné a bezplatné na prevádzku.",
       "items": [
         "Kľúč API netreba. Pole <em>Ollama URL</em> nastavte na svoj server, predvolene <code>http://localhost:11434</code>, alebo na hostiteľa s vašou inštanciou Ollama.",
         "Modely sa <strong>nefiltrujú.</strong> Monitor načíta modely stiahnuté pomocou <code>ollama pull &lt;model&gt;</code>. Ponuku naplní z <code>GET /api/tags</code> na serveri Ollama.",
@@ -234,7 +234,7 @@
   },
   "detailLevel": {
     "heading": "Úroveň detailov pre každý kanál",
-    "intro": "Telegram, Discord, Gotify a e-mail majú vlastnú ponuku úrovne detailov. Tri hodnoty určujú limit výstupných tokenov a pokyny predvoleného promptu:",
+    "intro": "Každý zo šiestich kanálov (Telegram, Discord, Gotify, e-mail, Pushover, Apprise) má vlastnú ponuku úrovne detailov. Tri hodnoty určujú limit výstupných tokenov a pokyny predvoleného promptu:",
     "headerLevel": "Úroveň",
     "headerLabel": "Štítok UI",
     "headerCap": "Výstupný strop",
@@ -261,7 +261,7 @@
     ],
     "defaultsIntro": "Predvolené hodnoty pri prvej inštalácii:",
     "defaults": [
-      "<strong>Telegram, Discord, Gotify</strong> — <code>standard</code>.",
+      "<strong>Telegram, Discord, Gotify, Pushover, Apprise</strong> — <code>standard</code>.",
       "<strong>E-mail</strong> — <code>detailed</code>. E-mail je kanál, kde zvyčajne chcete úplný obraz pre archív."
     ],
     "emailTitle": "Podrobný e-mail pripája pôvodnú správu",

@@ -118,7 +118,7 @@
     "imageCaption": "Informationsrutan i appen: sex kort, ett per leverantör, med beskrivningarna nedan.",
     "groq": {
       "heading": "Groq",
-      "tagline": "Mycket snabb, generös fri nivå (30 req/min). Perfekt att börja.",
+      "tagline": "Mycket snabb, med en generös fri nivå. Ett bra ställe att börja.",
       "items": [
         "API-nyckel: <a>console.groq.com/keys</a>",
         "Exempel från den medföljande modellistan: <code>allam-2-7b</code>, <code>qwen/qwen3.8-27b</code>, <code>openai/gpt-oss-20b</code>, <code>openai/gpt-oss-120b</code>.",
@@ -165,7 +165,7 @@
     },
     "ollama": {
       "heading": "Ollama (lokal)",
-      "tagline": "Använder modeller som din konfigurerade Ollama-server visar. Lokala modeller körs där; Ollamas molnmodeller vidarebefordrar anrop till en molnleverantör. Lokal körning undviker avgifter för ett hostat API men använder egen hårdvara och el.",
+      "tagline": "Använder modeller på din Ollama-server. Helt lokalt, privat och gratis att köra.",
       "items": [
         "Ingen API nyckel. Ställ in <em>Ollama URL</em>-fältet till din server (standard <code>http://localhost:11434</code> eller vilken värd som helst kör din Ollama-instans).",
         "Modellerna <strong>filtreras inte.</strong> Monitor läser modeller som hämtats med <code>ollama pull &lt;model&gt;</code>. Listrutan hämtas från <code>GET /api/tags</code> på din Ollama-server.",
@@ -234,7 +234,7 @@
   },
   "detailLevel": {
     "heading": "Detaljnivå per kanal",
-    "intro": "Telegram, Discord, Gotify och e-post har varsin detaljväljare. Tre värden styr gränsen för utdatatoken och instruktionerna i standardprompten:",
+    "intro": "Var och en av de sex kanalerna (Telegram, Discord, Gotify, e-post, Pushover, Apprise) har en egen detaljväljare. Tre värden styr gränsen för utdatatoken och instruktionerna i standardprompten:",
     "headerLevel": "Nivå",
     "headerLabel": "UI-märkning",
     "headerCap": "Utdatagräns",
@@ -261,7 +261,7 @@
     ],
     "defaultsIntro": "Standarder som Monitorn tillämpar på första installationen:",
     "defaults": [
-      "<strong>Telegram, Discord, Gotify</strong> — <code>standard</code>.",
+      "<strong>Telegram, Discord, Gotify, Pushover, Apprise</strong> — <code>standard</code>.",
       "<strong>E-post</strong> — <code>detailed</code>. E-post är den kanal där du vanligtvis vill ha hela bilden för arkiv."
     ],
     "emailTitle": "Detaljerad e-post lägger till originalet",

@@ -117,7 +117,7 @@
       "<strong>Zielanzeige</strong> — Speicherort (PBS-Cloud, PBS-Local, NFS-Backup, …), nach Zustand eingefärbt.",
       "<strong>Größe</strong> — endgültige Größe der Sicherung auf dem Datenträger."
     ],
-    "backupsOutro": "<strong>+ Sicherung erstellen</strong> startet eine Sicherung auf dem in Proxmox als „Backup target“ markierten Speicher. Die Wiederherstellung erfolgt in der Proxmox-Weboberfläche; Monitor zeigt aktuelle Sicherungen des Gasts und erstellt neue.",
+    "backupsOutro": "Die Schaltfläche <strong>+ Sicherung erstellen</strong> oben rechts öffnet einen Dialog, in dem Sie vor dem Start eines vzdump Speicher, Modus (snapshot / suspend / stop), Schutz und Notizen wählen. Die Wiederherstellung erfolgt in der Proxmox-Weboberfläche; Monitor zeigt aktuelle Sicherungen des Gasts und erstellt neue.",
     "firewallTitle": "Tab. 7 — Firewall",
     "firewallIntro": "Liest das Proxmox-Firewallprotokoll des Gasts direkt vom Host, ohne Zusatzdienst oder regelmäßige Abfragen. Der Reiter ist immer sichtbar; der Inhalt hängt davon ab, ob die Firewall aktiv ist und Regeln tatsächlich protokollieren.",
     "firewallItems": [
