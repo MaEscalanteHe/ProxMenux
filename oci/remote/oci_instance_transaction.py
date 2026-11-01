@@ -824,7 +824,11 @@ def candidate_host_sources(journal, state):
 
 def stop(vmid):
     if run('pct', 'status', str(vmid)).strip() == b'status: running':
-        run('pct', 'shutdown', str(vmid), '--timeout', '60')
+        try:
+            run('pct', 'shutdown', str(vmid), '--timeout', '60')
+        except RuntimeError:
+            # What `docker stop` does with a process that ignores the signal.
+            run('pct', 'stop', str(vmid))
     if run('pct', 'status', str(vmid)).strip() != b'status: stopped':
         raise ValueError(translate('The container did not stop; its disks are not touched'))
 

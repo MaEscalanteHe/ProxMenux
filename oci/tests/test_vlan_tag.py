@@ -64,6 +64,23 @@ class TagSetInProxmox(unittest.TestCase):
                          {"bridge": "vmbr1", "vlan_tag": 4})
 
 
+class Stopping(unittest.TestCase):
+    def test_a_container_that_ignores_the_shutdown_is_stopped(self):
+        calls, states = [], [b"status: running", b"status: stopped"]
+
+        def run(*args):
+            calls.append(args[:2])
+            if args[1] == "status":
+                return states.pop(0)
+            if args[1] == "shutdown":
+                raise RuntimeError("container did not stop")
+            return b""
+
+        with patch.object(transaction, "run", run):
+            transaction.stop(108)
+        self.assertIn(("pct", "stop"), calls)
+
+
 class Kept(unittest.TestCase):
     def test_the_update_names_the_tag_it_keeps(self):
         import oci_update_current as update
