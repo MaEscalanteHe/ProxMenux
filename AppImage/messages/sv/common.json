@@ -2670,8 +2670,7 @@
       "excluded": "Exkluderad",
       "notConnected": "Inte ansluten",
       "saveFailed": "Kunde inte spara diskutslag.",
-      "help": "En exkluderad disk får ingen schemalagd temperatur eller SMART läser - inte ens en power-mode fråga - så det lämnas helt ensam. Öppna SMART-detaljerna läser det fortfarande.",
-      "idleHelp": "Mekaniska diskar utan aktivitet lämnas redan ensam automatiskt tills något använder dem igen."
+      "help": "En exkluderad disk får ingen schemalagd temperatur eller SMART läser - inte ens en power-mode fråga - så det lämnas helt ensam. Öppna SMART-detaljerna läser det fortfarande."
     },
     "storageDisplay": {
       "title": "Storage Display",

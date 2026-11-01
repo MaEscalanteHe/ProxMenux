@@ -2669,8 +2669,7 @@
       "excluded": "Vylúčené",
       "notConnected": "Nepripojený",
       "saveFailed": "Nepodarilo sa uložiť vylúčenie disku.",
-      "help": "Vylúčený disk nedostane žiadnu plánovanú teplotu alebo SMART číta  Otvorenie jeho SMART detaily stále číta.",
-      "idleHelp": "Mechanické disky bez aktivity sú už automaticky ponechané samé, kým ich niečo znova nepoužíva."
+      "help": "Vylúčený disk nedostane žiadnu plánovanú teplotu alebo SMART číta  Otvorenie jeho SMART detaily stále číta."
     },
     "storageDisplay": {
       "title": "Displej úložiska",

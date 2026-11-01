@@ -242,8 +242,6 @@ export function DiskExclusions() {
               <Info className="h-3.5 w-3.5 text-blue-400 shrink-0 mt-0.5" />
               <p className="text-[11px] text-muted-foreground leading-relaxed">
                 {t("settings.diskExclusions.help")}
-                <br />
-                {t("settings.diskExclusions.idleHelp")}
               </p>
             </div>
           </div>

@@ -2670,8 +2670,7 @@
       "excluded": "Ausgeschlossen",
       "notConnected": "nicht verbunden",
       "saveFailed": "Konnte die Laufwerksausschlüsse nicht retten.",
-      "help": "Für ein ausgeschlossenes Laufwerk werden weder Temperatur noch SMART-Werte planmäßig ausgelesen, nicht einmal der Energiestatus wird abgefragt, sodass es völlig in Ruhe gelassen wird. Beim Aufrufen der SMART-Details werden diese immer noch gelsesn.",
-      "idleHelp": "Mechanische Laufwerke ohne Aktivität werden bereits automatisch in Ruhe gelassen, bis sie wieder verwendet werden."
+      "help": "Für ein ausgeschlossenes Laufwerk werden weder Temperatur noch SMART-Werte planmäßig ausgelesen, nicht einmal der Energiestatus wird abgefragt, sodass es völlig in Ruhe gelassen wird. Beim Aufrufen der SMART-Details werden diese immer noch gelsesn."
     },
     "storageDisplay": {
       "title": "Speicheranzeige",

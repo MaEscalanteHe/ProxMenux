@@ -2670,8 +2670,7 @@
       "excluded": "Exclusion",
       "notConnected": "Non connecté",
       "saveFailed": "Impossible d'enregistrer les exclusions du disque.",
-      "help": "Un disque exclu n'obtient aucune température programmée ou SMART lit — pas même une requête en mode de puissance — donc il est laissé tout seul. Ouverture de ses détails SMART le lit encore.",
-      "idleHelp": "Les disques mécaniques sans activité sont déjà laissés seuls automatiquement jusqu'à ce que quelque chose les utilise à nouveau."
+      "help": "Un disque exclu n'obtient aucune température programmée ou SMART lit — pas même une requête en mode de puissance — donc il est laissé tout seul. Ouverture de ses détails SMART le lit encore."
     },
     "storageDisplay": {
       "title": "Affichage du stockage",

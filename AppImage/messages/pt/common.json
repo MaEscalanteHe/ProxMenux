@@ -2670,8 +2670,7 @@
       "excluded": "Excluido",
       "notConnected": "Não conectado",
       "saveFailed": "Não foi possível salvar as exclusões do disco.",
-      "help": "Um disco excluído não recebe temperatura programada ou SMART lê — nem mesmo uma consulta de modo de potência — por isso é deixado completamente sozinho. A abertura dos seus detalhes SMART ainda o lê.",
-      "idleHelp": "Discos mecânicos sem atividade já são deixados sozinhos automaticamente até que algo os use novamente."
+      "help": "Um disco excluído não recebe temperatura programada ou SMART lê — nem mesmo uma consulta de modo de potência — por isso é deixado completamente sozinho. A abertura dos seus detalhes SMART ainda o lê."
     },
     "storageDisplay": {
       "title": "Exibição de armazenamento",

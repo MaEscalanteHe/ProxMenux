@@ -2802,8 +2802,7 @@
       "excluded": "Excluded",
       "notConnected": "Not connected",
       "saveFailed": "Could not save the disk exclusions.",
-      "help": "An excluded disk gets no scheduled temperature or SMART reads — not even a power-mode query — so it is left entirely alone. Opening its SMART details still reads it.",
-      "idleHelp": "Mechanical disks with no activity are already left alone automatically until something uses them again."
+      "help": "An excluded disk gets no scheduled temperature or SMART reads — not even a power-mode query — so it is left entirely alone. Opening its SMART details still reads it."
     }
   },
   "login": {

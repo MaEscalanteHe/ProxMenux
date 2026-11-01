@@ -2670,8 +2670,7 @@
       "excluded": "Escluso",
       "notConnected": "Non collegato",
       "saveFailed": "Impossibile salvare le esclusioni dei dischi.",
-      "help": "Un disco escluso non viene interrogato durante i controlli pianificati, nemmeno per temperatura, SMART o modalità di alimentazione. L’apertura dei suoi dettagli SMART comporta comunque una lettura.",
-      "idleHelp": "I dischi meccanici inattivi vengono già lasciati a riposo automaticamente finché non vengono nuovamente utilizzati."
+      "help": "Un disco escluso non viene interrogato durante i controlli pianificati, nemmeno per temperatura, SMART o modalità di alimentazione. L’apertura dei suoi dettagli SMART comporta comunque una lettura."
     },
     "storageDisplay": {
       "title": "visualizzazione della memoria",

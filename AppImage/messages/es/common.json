@@ -2823,8 +2823,7 @@
       "excluded": "Excluido",
       "notConnected": "No conectado",
       "saveFailed": "No se pudieron guardar las exclusiones de discos.",
-      "help": "Un disco excluido no recibe lecturas periódicas de temperatura ni de SMART —ni siquiera la consulta de su estado de energía—, así que el Monitor no lo consulta en absoluto. Abrir sus detalles SMART sí lo lee.",
-      "idleHelp": "Los discos mecánicos sin actividad ya no se consultan automáticamente, para no sacarlos del reposo, hasta que algo vuelve a usarlos."
+      "help": "Un disco excluido no recibe lecturas periódicas de temperatura ni de SMART —ni siquiera la consulta de su estado de energía—, así que el Monitor no lo consulta en absoluto. Abrir sus detalles SMART sí lo lee."
     },
     "storageDisplay": {
       "title": "Pantalla de almacenamiento",
