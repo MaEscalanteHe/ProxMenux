@@ -169,7 +169,7 @@ http://<proxmox-lan-ip>:8008      # works from any device on your tailnet`}
       </p>
 
       <figure className="my-6">
-        <img src="/monitor/auth-setup.png" alt={t("firstLaunch.imageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/auth-setup.png" alt={t("firstLaunch.imageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("firstLaunch.imageCaption")}</figcaption>
       </figure>
 
@@ -224,7 +224,7 @@ http://<proxmox-lan-ip>:8008      # works from any device on your tailnet`}
       </div>
 
       <figure className="my-6">
-        <img src="/monitor/security/create-user-form.png" alt={t("firstLaunch.createImageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/security/create-user-form.png" alt={t("firstLaunch.createImageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("firstLaunch.createImageCaption")}</figcaption>
       </figure>
 
@@ -241,7 +241,7 @@ http://<proxmox-lan-ip>:8008      # works from any device on your tailnet`}
       <p className="mb-4 text-gray-800 leading-relaxed">{t("firstLaunch.avatarBody2")}</p>
 
       <figure className="my-6">
-        <img src="/monitor/security/profile-page.png" alt={t("firstLaunch.profileImageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/security/profile-page.png" alt={t("firstLaunch.profileImageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("firstLaunch.profileImageCaption")}</figcaption>
       </figure>
 
@@ -279,7 +279,7 @@ http://<proxmox-lan-ip>:8008      # works from any device on your tailnet`}
       </ul>
 
       <figure className="my-6">
-        <img src="/monitor/login-screen.png" alt={t("password.loginImageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/login-screen.png" alt={t("password.loginImageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("password.loginImageCaption")}</figcaption>
       </figure>
 
@@ -425,7 +425,7 @@ menu
       <h3 className="text-lg font-semibold mt-6 mb-2 text-gray-900">{t("twofa.setupTitle")}</h3>
 
       <figure className="my-6">
-        <img src="/monitor/2fa-setup.png" alt={t("twofa.setupImageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/2fa-setup.png" alt={t("twofa.setupImageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("twofa.setupImageCaption")}</figcaption>
       </figure>
 
@@ -483,7 +483,7 @@ menu
       </p>
 
       <figure className="my-6">
-        <img src="/monitor/api-tokens.png" alt={t("apiTokens.imageAlt")} className="rounded-lg border border-gray-200 shadow-sm w-full" />
+        <img src="/monitor/api-tokens.png" alt={t("apiTokens.imageAlt")} className="rounded-lg border border-gray-200 shadow-xs w-full" />
         <figcaption className="text-sm text-gray-500 mt-2 text-center italic">{t("apiTokens.imageCaption")}</figcaption>
       </figure>
 
