@@ -21,12 +21,7 @@ export function Mermaid({ chart, className }: MermaidProps) {
         const mermaid = (await import("mermaid")).default
         mermaid.initialize({
           startOnLoad: false,
-          // Mermaid 12 defaults flowcharts to the neo look laid out by ELK,
-          // with narrower label wrapping and a minimum node width. The diagrams
-          // and the spacing below are tuned for the Mermaid 11 defaults.
           theme: "default",
-          look: "classic",
-          layout: "dagre",
           htmlLabels: true,
           securityLevel: "strict",
           themeVariables: {
@@ -39,8 +34,6 @@ export function Mermaid({ chart, className }: MermaidProps) {
             useMaxWidth: false,
             rankSpacing: 36,
             nodeSpacing: 40,
-            wrappingWidth: 200,
-            minNodeWidth: 0,
           },
         })
 
